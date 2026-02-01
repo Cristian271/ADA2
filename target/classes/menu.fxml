@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<AnchorPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="MenuController"
+        minWidth="1000.0"
+        minHeight="800.0">
+    <ImageView fx:id="cinta" AnchorPane.topAnchor="0"  AnchorPane.rightAnchor="0"
+               fitHeight="50" preserveRatio="false" pickOnBounds="true" fitWidth="1080"
+    />
+    <ImageView fx:id="uadyLogo" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="5" fitHeight="50" preserveRatio="true" fitWidth="50"/>
+
+    <HBox
+            AnchorPane.rightAnchor="20"
+            AnchorPane.topAnchor="10"
+            prefHeight="50"
+    >
+        <Button text="Salir" prefHeight="30" prefWidth="120" onAction="#exit"/>
+    </HBox>
+
+    <VBox   alignment="CENTER"
+            AnchorPane.bottomAnchor="0"
+            AnchorPane.topAnchor="50"
+            AnchorPane.rightAnchor="0"
+            AnchorPane.leftAnchor="0"
+            spacing="30"
+    >
+        <HBox alignment="CENTER" spacing="1">
+            <ImageView fx:id="calificaciones" fitWidth="65" fitHeight="65" preserveRatio="true"/>
+            <Label text="Lector de calificaciones" style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+        </HBox>
+        <HBox alignment="CENTER" spacing="1">
+            <Button text="Capturar" prefWidth="120" prefHeight="50" onAction="#readFile"/>
+            <Button text="Modificar" prefWidth="120" prefHeight="50" onAction="#modificar"/>
+        </HBox>
+
+
+        <HBox alignment="CENTER" spacing="5">
+            <ImageView fx:id="pdf" fitWidth="32" fitHeight="32" preserveRatio="true"/>
+            <Label text="Generador de PDF" style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+        </HBox>
+        <Button text="Generar" prefWidth="120" prefHeight="50" onAction="#generarPDF"/>
+
+        <HBox alignment="CENTER" spacing="5">
+            <ImageView fx:id="csvLogo" fitWidth="32" fitHeight="32" preserveRatio="true"/>
+            <Label text="Generador de CSV" style="-fx-font-size: 25px; -fx-font-weight: bold;"/>
+        </HBox>
+        <Button text="GENERAR" prefWidth="150" prefHeight="50" onAction="#generarCSV"/>
+
+    </VBox>
+
+
+
+
+</AnchorPane>
