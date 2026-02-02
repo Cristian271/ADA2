@@ -8,9 +8,8 @@ public class Start extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("menu.fxml"));
-        Scene scene = new Scene(loader.load(), 800, 100);
-        stage.setTitle("Menu");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+        Scene scene = new Scene(loader.load(), 500, 400);
         stage.setScene(scene);
         stage.show();
     }
